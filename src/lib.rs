@@ -30,9 +30,11 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>>{
         search(&config.query, &contents)
     };
 
+    println!("\n************RESULTS************\n");
     for line in results {
         println!("{line}");
     }
+    println!("\n************^^^^^^^************\n");
 
     return Ok(());
 }
